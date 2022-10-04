@@ -30,7 +30,7 @@ RSpec.describe 'before_all' do
     expect(fedex_carrier.name).to eq('Fedex Company')
   end
 
-  it 'checks fedex name' do
+  it 'shares state across examples' do
     fedex_carrier = Carrier.find_by(code: 'fedex')
     expect(fedex_carrier.name).to eq('Fedex Company')
   end
