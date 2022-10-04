@@ -10,7 +10,7 @@ RSpec.describe 'before_all' do
   end
 
   after do
-    Carrier.destroy_all
+    Carrier.delete_all
   end
 
   it 'checks dhl code' do
