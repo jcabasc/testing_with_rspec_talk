@@ -34,4 +34,9 @@ RSpec.describe "instance_variables" do
   it 'checks fedex name' do
     expect(@fedex_carrier.name).to eq('Fedex')
   end
+
+  it 'evaluates true as true' do
+    expect(true).to eq(true)
+    # byebug
+  end
 end
