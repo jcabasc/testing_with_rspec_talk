@@ -4,13 +4,13 @@ require 'spec_helper'
 
 RSpec.describe 'before_all' do
 
-  before(:all) do
+  before do
     create(:carrier, name: 'DHL', code: 'dhl')
     create(:carrier, name: 'Fedex', code: 'fedex')
   end
 
-  after(:all) do
-    Carrier.delete_all
+  after do
+    Carrier.destroy_all
   end
 
   it 'checks dhl code' do
@@ -32,7 +32,7 @@ RSpec.describe 'before_all' do
 
   it 'checks fedex name' do
     fedex_carrier = Carrier.find_by(code: 'fedex')
-    expect(fedex_carrier.name).to eq('Fedex Company')
+    expect(fedex_carrier.name).to eq('Fedex')
   end
 
   it 'evaluates true as true' do
