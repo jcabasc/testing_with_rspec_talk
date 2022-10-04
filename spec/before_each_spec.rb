@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-RSpec.describe 'before_all' do
+RSpec.describe 'before_each' do
 
   before do
     create(:carrier, name: 'DHL', code: 'dhl')
