@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'active_record'
 require 'sqlite3'
 require 'logger'
+require 'byebug'
 
 # Load all of our ActiveRecord::Base objects.
 require_relative 'models/carrier.rb' # carriers table
