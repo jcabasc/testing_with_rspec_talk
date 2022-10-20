@@ -5,11 +5,14 @@ require 'spec_helper'
 RSpec.describe 'before_all' do
 
   before(:all) do
+    # byebug
     create(:carrier, name: 'DHL', code: 'dhl')
     create(:carrier, name: 'Fedex', code: 'fedex')
+    # raise StandardError.new, 'Oopsie!'
   end
 
   after(:all) do
+    # raise StandardError.new, 'Oopsie!'
     Carrier.delete_all
   end
 
@@ -36,6 +39,7 @@ RSpec.describe 'before_all' do
   end
 
   it 'evaluates true as true' do
+    # raise StandardError.new, 'Oopsie!'
     expect(true).to eq(true)
     # byebug
   end

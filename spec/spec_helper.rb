@@ -20,4 +20,10 @@ RSpec.configure do |config|
   #     example.run
   #   end
   # end
+
+  # config.around(:all) do |example|
+  #   DatabaseCleaner.cleaning do
+  #     example.run
+  #   end
+  # end
 end
