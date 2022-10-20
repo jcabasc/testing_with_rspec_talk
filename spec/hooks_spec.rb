@@ -9,21 +9,21 @@ RSpec.configure do |config|
 end
 
 RSpec.describe 'order of hook execution' do
-  around(:all) do |each|
+  around(:all) do |example|
     puts '  AROUND BEFORE :all'
-    each.run
+    example.run
     puts '  AROUND AFTER :all'
   end
 
-  around(:each) do |each|
+  around(:each) do |example|
     puts '   AROUND BEFORE :each'
-    each.run
+    example.run
     puts '   AROUND AFTER :each'
   end
 
   before(:all) { puts ' BEFORE :all' }
   before(:each) { puts '    BEFORE :each' }
-  after(:each) { puts '     AFTER :each' }
+  after(:each) { puts '    AFTER :each' }
   after(:all) { puts 'AFTER :all' }
 
   it { expect(true).to be(true) }
