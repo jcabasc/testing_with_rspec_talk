@@ -6,7 +6,7 @@ gem 'activerecord'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec'
+  gem 'rspec', '3.11.0'
   gem 'factory_bot', '~> 5.1'
   gem 'database_cleaner-active_record', '~> 1.8'
   gem 'shoulda-matchers'

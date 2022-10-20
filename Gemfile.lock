@@ -63,7 +63,7 @@ DEPENDENCIES
   pry (~> 0.14.1)
   pry-nav (~> 1.0)
   rake
-  rspec
+  rspec (= 3.11.0)
   shoulda-matchers
   sqlite3
 
