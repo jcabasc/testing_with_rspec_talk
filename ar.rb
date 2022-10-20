@@ -9,8 +9,6 @@ require 'byebug'
 # Load all of our ActiveRecord::Base objects.
 require_relative 'models/carrier.rb' # carriers table
 require_relative 'models/service.rb' # services table
-require_relative 'models/plan.rb'  # plans table
-require_relative 'models/rate.rb' # rates table
 
 # Establish our connection to our serverless sqlite3 database.
 ActiveRecord::Base.establish_connection :adapter => 'sqlite3', :database => 'db/development.sqlite3'
