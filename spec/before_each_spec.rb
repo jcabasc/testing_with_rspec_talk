@@ -13,6 +13,12 @@ RSpec.describe 'before_each' do
     Carrier.delete_all
   end
 
+  around(:each, foo: :bar) do |example|
+    puts 'Before running the example'
+    example.run
+    puts 'After running the example'
+  end
+
   it 'checks dhl code' do
     dhl_carrier = Carrier.find_by(code: 'dhl')
     expect(dhl_carrier.code).to eq('dhl')
@@ -37,6 +43,9 @@ RSpec.describe 'before_each' do
 
   it 'evaluates true as true' do
     expect(true).to eq(true)
-    # byebug
   end
+
+  it 'runs the around hook and returns true', foo: :bar do
+    expect(true).to eq(true)
+  end  
 end
